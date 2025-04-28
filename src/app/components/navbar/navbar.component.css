@@ -1,0 +1,56 @@
+nav {
+  display: flex;
+  width: 518px;
+  height: 70px;
+  padding: 24px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background-color: #66492E80;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin: 0 auto 40px; /* Added bottom margin to separate from hero section */
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.logo {
+  font-size: var(--font-large);
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 64px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+  transition: color 0.3s ease;
+  font-size: var(--font-medium);
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  nav {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    flex-direction: column;
+    gap: var(--spacing-medium);
+    margin-top: var(--spacing-medium);
+  }
+}

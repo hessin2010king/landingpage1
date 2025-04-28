@@ -1,0 +1,25 @@
+<section id="featured-products" class="featured-products" 
+  (mouseenter)="onMouseEnter()" 
+  (mouseleave)="onMouseLeave()">
+  <h2>Featured Products</h2>
+  <div class="slider-container">
+    <button class="slider-btn prev-btn" (click)="slidePrev()">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+    <div class="product-slider">
+      <div class="product-card" *ngFor="let product of displayedProducts">
+        <div class="image-container">
+          <img [src]="product.image" [alt]="product.name">
+        </div>
+        <h3>{{ product.name }}</h3>
+      </div>
+    </div>
+    <button class="slider-btn next-btn" (click)="slideNext()">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+  </div>
+</section>

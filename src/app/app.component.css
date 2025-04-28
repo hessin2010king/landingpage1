@@ -1,0 +1,12 @@
+:host {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+  }
+
+.landing-page-background {
+  min-height: 100vh;
+  background-color: var(--background-color);
+  padding-top: 120px; /* Account for navbar height + margin */
+}

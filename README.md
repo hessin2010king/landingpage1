@@ -1,27 +1,47 @@
-# LandingPage1
+# Landing Page 1
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.12.
+## Overview
+A standalone Angular landing page with modular components and responsive design.
 
-## Development server
+## Features
+- Responsive design for desktop, tablet, and mobile
+- Standalone components
+- CSS variables for easy theming
+- Placeholder content for easy customization
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Components
+- Navbar
+- Hero Section
+- Featured Products
+- Shop Categories
+- About Us
+- Contact Form
+- Footer
 
-## Code scaffolding
+## Getting Started
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Prerequisites
+- Node.js (16+ recommended)
+- Angular CLI
 
-## Build
+### Installation
+1. Clone the repository
+2. Run `npm install`
+3. Run `ng serve`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Customization
+- Replace placeholder images in `src/assets/images/`
+- Modify text in component templates
+- Adjust color variables in `src/styles.css`
 
-## Running unit tests
+## Color Scheme
+- Primary Color: #3498db
+- Secondary Color: #2ecc71
+- Background: #f4f4f4
+- Text: #333
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Deployment
+Run `ng build --configuration=production` for production build.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## License
+[Insert License Here]

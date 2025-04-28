@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
@@ -11,6 +11,20 @@ import { RouterModule } from '@angular/router';
 })
 export class NavbarComponent {
   private readonly navbarHeight = 70;
+  isMobileMenuOpen = false;
+  isMobile = window.innerWidth <= 600;
+
+  @HostListener('window:resize')
+  onResize() {
+    this.isMobile = window.innerWidth <= 600;
+    if (!this.isMobile) {
+      this.isMobileMenuOpen = false;
+    }
+  }
+
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
 
   scrollToTop() {
     this.smoothScrollTo(0, 2000);

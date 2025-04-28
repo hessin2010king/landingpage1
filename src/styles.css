@@ -67,3 +67,34 @@ body {
   align-items: center;
   padding-top: var(--spacing-large);
 }
+
+@media (max-width: 1024px) {
+  .landing-page-background {
+    padding-top: var(--spacing-medium);
+    min-height: unset;
+  }
+}
+
+@media (max-width: 900px) {
+  .landing-page-background {
+    padding-left: var(--spacing-small);
+    padding-right: var(--spacing-small);
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-page-background {
+    padding: var(--spacing-small);
+    min-height: unset;
+  }
+}
+
+@media (max-width: 600px) {
+  .landing-page-background {
+    padding: 0;
+    min-height: unset;
+  }
+  body {
+    font-size: var(--font-small);
+  }
+}

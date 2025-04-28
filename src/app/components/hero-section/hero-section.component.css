@@ -44,18 +44,42 @@ button:hover {
   background-color: var(--secondary-color);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .hero {
     width: 100%;
-    height: auto;
+    height: 150px;
     padding: var(--spacing-medium);
+    border-radius: 10px;
   }
-
+  .hero-content {
+    padding: var(--spacing-small);
+  }
   h1 {
     font-size: var(--font-large);
   }
-
   p {
     font-size: var(--font-medium);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: var(--spacing-small);
+    border-radius: 0;
+  }
+  .hero-content {
+    padding: 0;
+  }
+  h1 {
+    font-size: var(--font-medium);
+  }
+  p {
+    font-size: var(--font-small);
+  }
+  a {
+    width: 100%;
+    display: block;
+    font-size: var(--font-small);
+    padding: 10px 0;
   }
 }

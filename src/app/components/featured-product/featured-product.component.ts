@@ -31,10 +31,19 @@ export class FeaturedProductComponent implements OnInit, OnDestroy, AfterViewIni
   private readonly SLIDE_DURATION = 1500;
   private readonly AUTO_SLIDE_INTERVAL = 1000;
   private readonly PAUSE_DURATION = 10;
-  private readonly VISIBLE_PRODUCTS = 5;
+  get VISIBLE_PRODUCTS(): number {
+    if (window.innerWidth <= 600) {
+      return 2;
+    } else if (window.innerWidth <= 1024) {
+      return 3;
+    } else {
+      return 5;
+    }
+  }
 
   ngOnInit() {
     this.initializeSlider();
+    window.addEventListener('resize', this.onResize);
   }
 
   ngAfterViewInit() {
@@ -43,7 +52,12 @@ export class FeaturedProductComponent implements OnInit, OnDestroy, AfterViewIni
 
   ngOnDestroy() {
     this.stopAutoSlide();
+    window.removeEventListener('resize', this.onResize);
   }
+
+  onResize = () => {
+    this.updateDisplayedProducts();
+  };
 
   initializeSlider() {
     this.updateDisplayedProducts();

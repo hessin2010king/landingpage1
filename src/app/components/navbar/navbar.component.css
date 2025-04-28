@@ -8,19 +8,10 @@ nav {
   border-radius: 15px;
   background-color: #66492E80;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  margin: 0 auto 40px; /* Added bottom margin to separate from hero section */
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
+
 }
 
-.logo {
-  font-size: var(--font-large);
-  font-weight: bold;
-  color: var(--primary-color);
-}
+
 
 ul {
   display: flex;
@@ -33,6 +24,7 @@ a {
   color: var(--white);
   transition: color 0.3s ease;
   font-size: var(--font-medium);
+  cursor: pointer;
 }
 
 a:hover {
